@@ -4,12 +4,17 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "start http://localhost:1234"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "package": "^1.0.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "http-server": "^14.1.1"
   }
 }
