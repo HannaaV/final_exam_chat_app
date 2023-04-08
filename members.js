@@ -49,9 +49,6 @@ const DOM = {
   
   export function addMessageToListDOM(text, member) {
     const el = DOM.messages;
-    const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
     el.appendChild(createMessageElement(text, member));
-    if (wasTop) {
-      el.scrollTop = el.scrollHeight - el.clientHeight;
-    }
+    el.scrollTop = el.scrollHeight - el.clientHeight;
   }

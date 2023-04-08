@@ -1,48 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+  box-sizing: border-box;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  background-image: url("/images/istockphoto-153642132-612x612.jpg");
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+}
 
-  .members-count,
-  .members-list,
-  .messages {
-    border: 1px solid #e4e4e4;
-    padding: 15px;
-    margin-bottom: 15px;
-  }
+.title{
+  margin: auto;
+  font-size: 80px;
+}
 
-  .messages {
-    flex-shrink: 1;
-    overflow: auto;
-  }
+.members-count,
+.members-list,
+.messages {
+  border: 1px solid #e4e4e4;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background: white;
+  justify-content: center;
+  border-radius: 10px;
+}
 
-  .message {
-    padding: 5px 0;
-  }
-  .message .member {
-    display: inline-block;
-  }
+.members-count {
+  border: 1px solid #e4e4e4;
+  padding:  15px;
+  display: flex;
+  margin-bottom: 0px;
+}
 
-  .member {
-    padding-right: 10px;
-    position: relative;
-  }
+.messages {
+  flex-shrink: 1;
+  overflow: auto;
+  width: 100vh;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.4);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
 
-  .message-form {
-    display: flex;
-    flex-shrink: 0;
-  }
-  .message-form__input {
-    flex-grow: 1;
-    border: 1px solid #dfdfdf;
-    padding: 10px 15px;
-    font-size: 16px;
-  }
-  .message-form__button {
-    margin: 10px;
-  }
+.message {
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+.message .member {
+  display: inline-block;
+}
+
+.member {
+  padding-right: 10px;
+  position: relative;
+}
+
+.message-form {
+  display: flex;
+  flex-shrink: 0;
+  padding: 0px 0px 0px 20px;
+  width: 105vh;
+}
+
+.message-form__input {
+  flex-grow: 1;
+  border: 1px solid #dfdfdf;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.message-form__button {
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00FF00;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.float-container {
+  margin: 100px 100px 150px 100px;
+  display: flex;
+}
+
+.float-child {
+  width: 30%;
+  float: left;
+}  

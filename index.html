@@ -6,15 +6,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="members-count">-</div>
-  <div class="members-list">-</div>
-  <div class="messages"></div>
-  <form class="message-form" onsubmit="return false;">
-    <input class="message-form__input" placeholder="Upišite poruku.." type="text"/>
-    <input class="message-form__button" value="Pošaji" type="submit"/>
-  </form>
+  <h1 class="title">Chat</h1>
+
+  <div class="float-container">
+    <div class="float-child">
+      <div class="members-count"></div>
+      <div class="members-list"></div>
+    </div> 
+    <div class="float-child">
+      <div class="messages"></div>
+      <form class="message-form" onsubmit="return false;">
+        <input class="message-form__input" placeholder="Type your message here.." type="text"/>
+        <input class="message-form__button" value="Send" type="submit"/>
+      </form>
+    </div> 
+  </div>
   <script type="module" src="./script.js"></script>
 </body>
 </html>
