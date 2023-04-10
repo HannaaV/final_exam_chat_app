@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "start http://localhost:1234"
+    "start": "concurrently \"http-server -a localhost -p 3000\" \"start http://localhost:3000\""
   },
   "keywords": [],
   "author": "",
