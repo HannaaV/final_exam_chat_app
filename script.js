@@ -15,14 +15,14 @@ drone.on('open', error => {
   if (error) {
     return console.error(error);
   }
-  console.log('Successfully connected to Scaledrone');
+  console.log('Welcome to ScaledroneChatApp!');
 
   const room = drone.subscribe('observable-room');
   room.on('open', error => {
     if (error) {
       return console.error(error);
     }
-    console.log('Successfully joined room');
+    console.log('You successfully joined room');
   });
 
   room.on('members', m => {
@@ -45,7 +45,7 @@ drone.on('open', error => {
     if (member) {
       addMessageToListDOM(text, member);
     } else {
-      // Message is from server
+      
     }
   });
 });

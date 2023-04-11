@@ -21,7 +21,7 @@ const DOM = {
       message: value,
     });
   }
-  
+
   function createMemberElement(member) {
     const { name, color } = member.clientData;
     const el = document.createElement('div');
@@ -32,7 +32,7 @@ const DOM = {
   }
   
   export function updateMembersDOM(members) {
-    DOM.membersCount.innerText = `${members.length} users in room:`;
+    DOM.membersCount.innerText = `${members.length} users in the mood to chat:`;
     DOM.membersList.innerHTML = '';
     members.forEach(member =>
       DOM.membersList.appendChild(createMemberElement(member))
