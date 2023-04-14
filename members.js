@@ -12,7 +12,7 @@ const DOM = {
   
   function sendMessage() {
     const value = DOM.input.value;
-    if (value === '') {
+    if (value.trim().length === 0) {
       return;
     }
     DOM.input.value = '';
@@ -25,14 +25,23 @@ const DOM = {
   function createMemberElement(member) {
     const { name, color } = member.clientData;
     const el = document.createElement('div');
-    el.appendChild(document.createTextNode(name));
+    if (drone.clientId === member.id) {
+      el.appendChild(document.createTextNode(name + ' * '));
+    } else {
+      el.appendChild(document.createTextNode(name));
+    }
     el.className = 'member';
     el.style.color = color;
     return el;
   }
   
   export function updateMembersDOM(members) {
-    DOM.membersCount.innerText = `${members.length} users in the mood to chat:`;
+    if (members.length > 1) {
+      DOM.membersCount.innerText = `${members.length} users in the mood to chat:`;
+    }
+    else {
+      DOM.membersCount.innerText = `${members.length} user in the mood to chat:`;
+    }
     DOM.membersList.innerHTML = '';
     members.forEach(member =>
       DOM.membersList.appendChild(createMemberElement(member))
@@ -40,12 +49,17 @@ const DOM = {
   }
   
   function createMessageElement(text, member) {
-    const el = document.createElement('div');
-    el.appendChild(createMemberElement(member));
-    el.appendChild(document.createTextNode(text));
-    el.className = 'message';
-    return el;
+  const el = document.createElement('div');
+  el.appendChild(createMemberElement(member));
+  el.appendChild(document.createElement('br'));
+  el.appendChild(document.createTextNode(text));
+  if (drone.clientId === member.id) {
+    el.className = 'message outgoing';
+  } else {
+    el.className = 'message incoming';
   }
+  return el;
+}
   
   export function addMessageToListDOM(text, member) {
     const el = DOM.messages;
