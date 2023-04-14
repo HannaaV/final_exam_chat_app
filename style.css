@@ -51,7 +51,6 @@ body {
   margin-top: -10%;
   overflow-wrap: break-word;
   word-break: break-word;
-  
 }
 
 .message {
@@ -61,19 +60,18 @@ body {
   border-radius: 1vw;
   background-color: #fff;
   color: #333;
-  
 }
 
 .message.outgoing {
   text-align: right;
-  background-color: #d3ffc7;
   margin-left: auto;
+  background-color: #d3ffc7;
 }
 
 .message.incoming {
   text-align: left;
+  margin-right: auto;
   background-color: #fff;
-  margin-right: auto; 
 }
 
 .message .member {
@@ -97,8 +95,8 @@ body {
 .message-form__input {
   flex-grow: 1;
   border: 0.1vw solid #dfdfdf;
-  padding: 1% 2%;
   border-radius: 0.8vw;
+  padding: 1% 2%;
   font-size: 1.2vw;
 }
 
@@ -109,9 +107,9 @@ body {
   border-radius: 0.5vw;
   background-color: #84dc84;
   font-size: 1.1vw;
+  font-weight: 600;
   color: #000000;
   cursor: pointer;
-  font-weight: 600;
 }
 
 .clear-btn {
@@ -121,9 +119,9 @@ body {
   border-radius: 0.5vw;
   background-color: #84dc84;
   font-size: 1.1vw;
+  font-weight: 600;
   color: #000000;
   cursor: pointer;
-  font-weight: 600;
 }
 
 .float-container {
